@@ -27,9 +27,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   //? only name is required based on how Schema was designed
   const newTestData = new TestData({
-    name: req.body.name,
-    comment: req.body.comment,
-    date: req.body.date
+    name: 'Ryan',
+    comment: 'Test'
   });
   console.log(newTestData);
   newTestData.save().then(testData => res.json(testData));
