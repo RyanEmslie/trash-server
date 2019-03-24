@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const testData = require('./routes/api/testData');
 
@@ -8,7 +9,7 @@ const path = require('path');
 // initialize express
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 // DB config
 const db = require('./config/keys').mongoURI;
 
